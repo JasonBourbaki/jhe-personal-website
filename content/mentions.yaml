@@ -12,12 +12,20 @@
 
 - id: politico-forecast-best-of-substack
   outlet: Politico
-  title: "Forecast: A stark warning for centrists"
+  title: "Best of Substack"
   date: 2026-07-24
   url: https://www.politico.com/newsletters/forecast/2026/07/24/a-stark-warning-for-centrists-01011580
   context: >-
     "The big exceptions to the American manufacturing jobs decline" selected for
     Best of Substack.
+
+- id: macro-roundup-aerospace-ai
+  outlet: Edward Conard's Macro Roundup
+  title: Aerospace and AI drive U.S. manufacturing job growth
+  date: 2026-07-24
+  url: https://www.edwardconard.com/macro-roundup/the-big-exceptions-to-the-american-manufacturing-jobs/
+  context: >-
+    Featured my analysis of the manufacturing subsectors still adding jobs.
 
 - id: newsweek-h1b-skyrocket
   outlet: Newsweek
@@ -49,9 +57,27 @@
   url: https://www.nber.org/papers/w34793
   context: Cites and responds to He & Ozimek (2026), our critique of the paper's wage-gap methodology.
 
+- id: macro-roundup-borjas-h1b
+  outlet: Edward Conard's Macro Roundup
+  title: The Flawed Paper Behind Trump's $100,000 H-1B Fee
+  date: 2026-02-23
+  url: https://www.edwardconard.com/macro-roundup/he-ozimek-dispute-borjas-finding-that-h1-b-workers-are-underpaid-a-temporal-mismatch-between-the-native-sample-and-the-h-1b-sample-means-effectively-comparing-2020/
+  context: >-
+    Featured our finding that a temporal mismatch inflated Borjas's estimate of
+    the H-1B wage gap.
+
 - id: csis-h1b-reforms
   outlet: Center for Strategic and International Studies
   title: Practical H-1B Reforms to Serve U.S. Economic Interests
   date: 2026-02-02
   url: https://www.csis.org/analysis/practical-h-1b-reforms-serve-us-economic-interests
   context: Cites our EIG comment letter on the DHS H-1B weighted-lottery proposal.
+
+- id: macro-roundup-blunt-tariffs
+  outlet: Edward Conard's Macro Roundup
+  title: Blunt Tariffs Undermine Efforts to Reshore High-Tech Manufacturing
+  date: 2025-09-10
+  url: https://www.edwardconard.com/macro-roundup/us-advanced-manufacturers-import-between-27-and-37-of-their-intermediate-inputs-and-capital-equipment-jiaxin-he-and-connor-obrien-argue-tariffs-are-likely-to-backfire-raising-costs-for-am/
+  context: >-
+    Featured our finding that advanced manufacturers import 27-37 percent of
+    their inputs, so blunt tariffs raise their costs.
