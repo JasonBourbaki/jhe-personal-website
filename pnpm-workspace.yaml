@@ -1,5 +1,18 @@
 overrides:
-  sharp: ^0.34.5
+  sharp: ^0.35.3
+  postcss: ^8.5.18
+  # Build-time-only transitive deps (astro-icon -> @iconify/tools, cssnano, astro).
+  # None of this code ships to the browser; pinned to patched versions to keep
+  # the build machine and CI clean. Verify `pnpm build` after changing these.
+  axios: ^1.18.1
+  tar: ^7.5.22
+  undici: ^8.9.0
+  form-data: ^4.0.6
+  follow-redirects: ^1.16.0
+  # svgo is pulled in at two majors (astro/cssnano want 3.x, @iconify/tools 4.x);
+  # patch each in place rather than forcing one major on both.
+  svgo@3: ^3.3.4
+  svgo@4: ^4.0.2
 allowBuilds:
   "@biomejs/biome": true
   "@tailwindcss/oxide": true

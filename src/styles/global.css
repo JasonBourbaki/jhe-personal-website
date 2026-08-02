@@ -13,51 +13,52 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 /* register custom colour properties */
+/* palette: black, white, and blue — light mode is white/near-black with a #2563eb-family blue */
 @property --color-global-bg {
 	syntax: "<color>";
 	inherits: true;
-	initial-value: oklch(98.48% 0 0);
+	initial-value: oklch(99.4% 0 0);
 }
 @property --color-global-text {
 	syntax: "<color>";
 	inherits: true;
-	initial-value: oklch(26.99% 0.0096 235.05);
+	initial-value: oklch(21% 0.012 260);
 }
 @property --color-muted {
 	syntax: "<color>";
 	inherits: true;
-	initial-value: oklch(44.6% 0.03 256.802);
+	initial-value: oklch(46% 0.022 260);
 }
 @property --color-link {
 	syntax: "<color>";
 	inherits: true;
-	initial-value: oklch(55.44% 0.0431 185.69);
+	initial-value: oklch(54.6% 0.215 262.9);
 }
 @property --color-accent {
 	syntax: "<color>";
 	inherits: true;
-	initial-value: oklch(55.27% 0.195 19.06);
+	initial-value: oklch(54.6% 0.215 262.9);
 }
 @property --color-accent-2 {
 	syntax: "<color>";
 	inherits: true;
-	initial-value: oklch(18.15% 0 0);
+	initial-value: oklch(15% 0.005 260);
 }
 @property --color-quote {
 	syntax: "<color>";
 	inherits: true;
-	initial-value: oklch(55.27% 0.195 19.06);
+	initial-value: oklch(48% 0.16 262.9);
 }
 
 /* you could refactor below to use light-dark(), depending on your target audience */
 @theme {
-	--color-global-bg: oklch(98.48% 0 0);
-	--color-global-text: oklch(26.99% 0.0096 235.05);
-	--color-muted: oklch(44.6% 0.03 256.802);
-	--color-link: oklch(55.44% 0.0431 185.69);
-	--color-accent: oklch(55.27% 0.195 19.06);
-	--color-accent-2: oklch(18.15% 0 0);
-	--color-quote: oklch(55.27% 0.195 19.06);
+	--color-global-bg: oklch(99.4% 0 0);
+	--color-global-text: oklch(21% 0.012 260);
+	--color-muted: oklch(46% 0.022 260);
+	--color-link: oklch(54.6% 0.215 262.9);
+	--color-accent: oklch(54.6% 0.215 262.9);
+	--color-accent-2: oklch(15% 0.005 260);
+	--color-quote: oklch(48% 0.16 262.9);
 }
 
 @layer base {
@@ -72,13 +73,14 @@
 
 		&[data-theme="dark"] {
 			color-scheme: dark;
-			--color-global-bg: oklch(23.64% 0.0045 248);
-			--color-global-text: oklch(83.54% 0 264);
-			--color-muted: oklch(70.7% 0.022 261.325);
-			--color-link: oklch(70.44% 0.1133 349);
-			--color-accent: oklch(70.91% 0.1415 163.7);
-			--color-accent-2: oklch(94.66% 0 0);
-			--color-quote: oklch(94.8% 0.106 136.49);
+			/* near-black blue-tinted bg, white text, #60a5fa-family blue */
+			--color-global-bg: oklch(17.5% 0.008 260);
+			--color-global-text: oklch(90% 0.005 260);
+			--color-muted: oklch(71% 0.02 260);
+			--color-link: oklch(71.4% 0.143 254.6);
+			--color-accent: oklch(71.4% 0.143 254.6);
+			--color-accent-2: oklch(97.5% 0 0);
+			--color-quote: oklch(78% 0.11 254.6);
 		}
 
 		--color-mode-transition-duration: 300ms;

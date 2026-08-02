@@ -1,0 +1,57 @@
+# Media mentions — press citations, quotes, and other coverage.
+#
+# Fields:
+#   id          unique slug
+#   outlet      publication or organization
+#   title       title of the piece that mentions me
+#   date        YYYY-MM-DD (used for sorting and display)
+#   displayDate optional — shown instead of the formatted date when the exact
+#               day is unknown (e.g. "April 2026")
+#   url         link to the piece
+#   context     optional one-liner on how the piece mentions me
+
+- id: politico-forecast-best-of-substack
+  outlet: Politico
+  title: "Forecast: A stark warning for centrists"
+  date: 2026-07-24
+  url: https://www.politico.com/newsletters/forecast/2026/07/24/a-stark-warning-for-centrists-01011580
+  context: >-
+    "The big exceptions to the American manufacturing jobs decline" selected for
+    Best of Substack.
+
+- id: newsweek-h1b-skyrocket
+  outlet: Newsweek
+  title: H-1B Visas Skyrocket Despite Trump Admin Crackdown
+  date: 2026-07-03
+  url: https://www.newsweek.com/h-1b-visas-skyrocket-despite-trump-admin-crackdown-12154338
+  context: Quoted on why continuing-employment H-1B approvals overcount unique workers.
+
+- id: manufacturing-momentum-defense
+  outlet: Manufacturing Momentum
+  title: Where the Manufacturing Jobs Are, and What It Means for Defense
+  date: 2026-04-10
+  url: https://www.manufacturingmomentum.org/insight/where-the-manufacturing-jobs-are-and-what-it-means-for-defense/
+  context: Cites my EIG analysis of post-2019 manufacturing job growth concentration.
+
+- id: manufacturing-net-great-divide
+  outlet: Manufacturing.net
+  title: "The Great Divide: 12 States Control 95% of Manufacturing Job Growth"
+  date: 2026-04-08
+  displayDate: April 2026
+  url: https://www.manufacturing.net/operations/article/22964440/the-great-divide-12-states-control-95-of-manufacturing-job-growth
+  context: Coverage based on my analysis of state-level manufacturing employment growth.
+
+- id: borjas-nber-response
+  outlet: NBER Working Paper No. 34793 (George J. Borjas)
+  title: The H-1B Wage Gap, Visa Fees, and Employer Demand
+  date: 2026-03-01
+  displayDate: March 2026
+  url: https://www.nber.org/papers/w34793
+  context: Cites and responds to He & Ozimek (2026), our critique of the paper's wage-gap methodology.
+
+- id: csis-h1b-reforms
+  outlet: Center for Strategic and International Studies
+  title: Practical H-1B Reforms to Serve U.S. Economic Interests
+  date: 2026-02-02
+  url: https://www.csis.org/analysis/practical-h-1b-reforms-serve-us-economic-interests
+  context: Cites our EIG comment letter on the DHS H-1B weighted-lottery proposal.

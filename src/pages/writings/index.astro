@@ -1,0 +1,43 @@
+---
+import Citation from "@/components/Citation.astro";
+import { getAllWritings, groupByYear, writingTypeLabels, writingTypeOrder } from "@/data/writings";
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+	description: "Writings, papers, and data projects by Jiaxin He",
+	title: "Writings and Projects",
+};
+
+const allWritings = await getAllWritings();
+const sections = writingTypeOrder
+	.map((type) => ({
+		label: writingTypeLabels[type],
+		years: groupByYear(allWritings.filter((w) => w.data.type === type)),
+	}))
+	.filter((section) => section.years.length > 0);
+---
+
+<PageLayout meta={meta}>
+	<div data-pagefind-body>
+		<h1 class="title mb-6">Writings and Projects</h1>
+		{
+			sections.map(({ label, years }) => (
+				<section class="mt-12 first-of-type:mt-0">
+					<h2 class="title text-accent mb-6 text-xl">{label}</h2>
+					{years.map(([year, writings]) => (
+						<div class="mb-8">
+							<h3 class="text-accent-2 mb-4 font-semibold">{year}</h3>
+							<ul class="space-y-4" role="list">
+								{writings.map((writing) => (
+									<li>
+										<Citation writing={writing} />
+									</li>
+								))}
+							</ul>
+						</div>
+					))}
+				</section>
+			))
+		}
+	</div>
+</PageLayout>

@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "@/components/FormattedDate.astro";
+
+interface Props {
+	writing: CollectionEntry<"writing">;
+	// Optional: an article with no cover image in featured.ts renders text-only
+	image?: ImageMetadata | undefined;
+	imageAlt?: string | undefined;
+}
+
+const { image, imageAlt, writing } = Astro.props;
+const { date, displayDate, title, url, venue } = writing.data;
+---
+
+<a
+	class="border-muted/40 hover:border-accent group flex flex-col overflow-hidden rounded-lg border transition-colors"
+	href={url}
+	rel="noopener noreferrer"
+	target="_blank"
+>
+	{
+		image && (
+			<div class="aspect-video overflow-hidden">
+				<Image
+					alt={imageAlt ?? ""}
+					class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+					densities={[1, 2]}
+					src={image}
+					width={600}
+				/>
+			</div>
+		)
+	}
+	<div class="flex flex-1 flex-col gap-1 p-4">
+		<h3 class="text-accent-2 group-hover:text-accent font-semibold transition-colors">{title}</h3>
+		<p class="text-muted mt-auto text-sm">
+			<span class="italic">{venue}</span> &middot;{" "}
+			{
+				displayDate ? (
+					displayDate
+				) : (
+					<FormattedDate date={date} dateTimeOptions={{ timeZone: "UTC" }} />
+				)
+			}
+		</p>
+	</div>
+</a>

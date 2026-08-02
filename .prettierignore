@@ -6,3 +6,6 @@ node_modules
 
 pnpm-lock.yaml
 dist
+
+# biome and prettier disagree on the long mask: declaration — biome owns this file
+src/styles/components/github-card.css

@@ -1,0 +1,37 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "@/components/FormattedDate.astro";
+
+interface Props {
+	mention: CollectionEntry<"mention">;
+}
+
+const { mention } = Astro.props;
+const { context, date, displayDate, outlet, title, url } = mention.data;
+---
+
+<article>
+	<p>
+		<span class="text-accent-2 font-semibold">{outlet}</span>{" "}
+		<span class="text-muted"
+			>&middot;{" "}
+			{
+				displayDate ? (
+					displayDate
+				) : (
+					<FormattedDate date={date} dateTimeOptions={{ timeZone: "UTC" }} />
+				)
+			}</span
+		>
+	</p>
+	<a
+		class="cactus-link"
+		data-pagefind-meta="title"
+		href={url}
+		rel="noopener noreferrer"
+		target="_blank"
+	>
+		{title}
+	</a>
+	{context && <p class="text-muted text-sm">{context}</p>}
+</article>
