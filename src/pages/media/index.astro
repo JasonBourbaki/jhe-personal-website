@@ -1,0 +1,32 @@
+---
+import MentionItem from "@/components/MentionItem.astro";
+import { getAllMentions, groupByYear } from "@/data/writings";
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+	description: "Press citations and media coverage of Jiaxin He's work",
+	title: "Media Mentions",
+};
+
+const years = groupByYear(await getAllMentions());
+---
+
+<PageLayout meta={meta}>
+	<div data-pagefind-body>
+		<h1 class="title mb-6">Media Mentions</h1>
+		{
+			years.map(([year, mentions]) => (
+				<section class="mt-12 first-of-type:mt-6">
+					<h2 class="text-accent-2 mb-4 text-lg font-semibold">{year}</h2>
+					<ul class="space-y-6" role="list">
+						{mentions.map((mention) => (
+							<li>
+								<MentionItem mention={mention} />
+							</li>
+						))}
+					</ul>
+				</section>
+			))
+		}
+	</div>
+</PageLayout>

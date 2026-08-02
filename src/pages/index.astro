@@ -1,84 +1,75 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import PostPreview from "@/components/blog/PostPreview.astro";
-import Note from "@/components/note/Note.astro";
+import Citation from "@/components/Citation.astro";
+import FeaturedCard from "@/components/FeaturedCard.astro";
+import MentionItem from "@/components/MentionItem.astro";
 import SocialList from "@/components/SocialList.astro";
-import { getAllPosts } from "@/data/post";
+import { getFeaturedWritings } from "@/data/featured";
+import { getAllMentions, getAllWritings } from "@/data/writings";
 import PageLayout from "@/layouts/Base.astro";
-import { collectionDateSort } from "@/utils/date";
 
-// Posts
-const MAX_POSTS = 10;
-const allPosts = await getAllPosts();
-const allPostsByDate = allPosts.sort(collectionDateSort) as CollectionEntry<"post">[];
-const latestPosts = allPostsByDate.slice(0, MAX_POSTS);
+const MAX_WRITINGS = 7;
+const MAX_MENTIONS = 5;
 
-// Pinned Posts, set to a max of 3;
-const MAX_PINNED_POSTS = 3;
-const pinnedPosts = allPostsByDate
-	.values()
-	.filter((p) => p.data.pinned)
-	.take(MAX_PINNED_POSTS)
-	.toArray();
-
-// Notes, set to a max of 5
-const MAX_NOTES = 5;
-const allNotes = await getCollection("note");
-const latestNotes = allNotes
-	.sort(collectionDateSort)
-	.slice(0, MAX_NOTES) as CollectionEntry<"note">[];
+const latestWritings = (await getAllWritings()).slice(0, MAX_WRITINGS);
+const latestMentions = (await getAllMentions()).slice(0, MAX_MENTIONS);
+const featuredCards = await getFeaturedWritings();
 ---
 
 <PageLayout meta={{ title: "Home" }}>
 	<section>
-		<h1 class="title mb-12">Hello World!</h1>
+		<h1 class="title mb-2">Jiaxin (Jason) He</h1>
+		<p class="text-accent mb-6 font-semibold">Research Assistant, Economic Innovation Group</p>
 		<p class="mb-4">
-			Hi, I’m a theme for Astro, a simple starter that you can use to create your website or blog.
-			If you want to know more about how you can customise me, add more posts, and make it your own,
-			click on the GitHub icon link below and it will take you to my repo.
+			I work on economic dynamism research, focusing on industrial policy, high-skilled immigration,
+			trade in high-tech goods, and the labor market impact of artificial intelligence. My other
+			interests include progress studies, pro-housing reforms, the global semiconductor supply
+			chain, and Sino-U.S. strategic competition. I graduated from Yale with a double major in
+			economics and history.
 		</p>
 		<SocialList />
 	</section>
-	{
-		pinnedPosts.length > 0 && (
-			<section class="mt-16">
-				<h2 class="title mb-6 text-xl">Pinned Posts</h2>
-				<ul class="space-y-4" role="list">
-					{pinnedPosts.map((p) => (
-						<li class="grid gap-1 sm:grid-cols-[auto_1fr]">
-							<PostPreview post={p} />
-						</li>
-					))}
-				</ul>
-			</section>
-		)
-	}
 	<section class="mt-16">
-		<h2 class="title text-accent mb-6 text-xl"><a href="/posts/">Posts</a></h2>
+		<h2 class="title mb-6 text-xl">Featured</h2>
+		<div class="grid gap-6 sm:grid-cols-2">
+			{
+				featuredCards.map(({ image, imageAlt, writing }) => (
+					<FeaturedCard image={image} imageAlt={imageAlt} writing={writing} />
+				))
+			}
+		</div>
+	</section>
+	<section class="mt-16">
+		<h2 class="title text-accent mb-6 text-xl">
+			<a href="/writings/">Writings and Projects</a>
+		</h2>
 		<ul class="space-y-4" role="list">
 			{
-				latestPosts.map((p) => (
-					<li class="grid gap-1 sm:grid-cols-[auto_1fr]">
-						<PostPreview post={p} />
+				latestWritings.map((writing) => (
+					<li>
+						<Citation writing={writing} />
 					</li>
 				))
 			}
 		</ul>
+		<p class="mt-6">
+			<a class="cactus-link text-accent font-semibold" href="/writings/">View all &rarr;</a>
+		</p>
 	</section>
-	{
-		latestNotes.length > 0 && (
-			<section class="mt-16">
-				<h2 class="title text-accent mb-6 text-xl">
-					<a href="/notes/">Notes</a>
-				</h2>
-				<ul class="space-y-6" role="list">
-					{latestNotes.map((note) => (
-						<li>
-							<Note note={note} as="h3" isPreview />
-						</li>
-					))}
-				</ul>
-			</section>
-		)
-	}
+	<section class="mt-16">
+		<h2 class="title text-accent mb-6 text-xl">
+			<a href="/media/">Media Mentions</a>
+		</h2>
+		<ul class="space-y-4" role="list">
+			{
+				latestMentions.map((mention) => (
+					<li>
+						<MentionItem mention={mention} />
+					</li>
+				))
+			}
+		</ul>
+		<p class="mt-6">
+			<a class="cactus-link text-accent font-semibold" href="/media/">View all &rarr;</a>
+		</p>
+	</section>
 </PageLayout>

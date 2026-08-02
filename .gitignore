@@ -23,3 +23,7 @@ pnpm-debug.log*
 *.pem
 .cache
 .astro
+
+# Claude Code worktrees live here; never commit them
+.claude/worktrees/
+.claude/settings.local.json

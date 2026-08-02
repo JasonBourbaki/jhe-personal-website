@@ -1,0 +1,135 @@
+# Writings, papers, and data projects.
+#
+# To add an item, copy a block and edit. Fields:
+#   id          unique slug (never shown, used internally and by featured.ts)
+#   type        paper | writing | data-project
+#   title       full title
+#   authors     list, in published order
+#   venue       where it was published
+#   date        YYYY-MM-DD (used for sorting and display)
+#   displayDate optional — shown instead of the formatted date when the exact
+#               day is unknown (e.g. "2025")
+#   url         link to the piece
+#   github      optional — link to a companion GitHub repository
+
+- id: big-exceptions-manufacturing-decline
+  type: writing
+  title: The big exceptions to the American manufacturing jobs decline
+  authors: [Jiaxin He]
+  venue: Agglomerations
+  date: 2026-07-24
+  url: https://agglomerations.eig.org/p/the-big-exceptions-to-the-american
+
+- id: city-journal-h1b
+  type: writing
+  title: How Trump Can Fix the H-1B System
+  authors: [Sam Peak, Jiaxin He]
+  venue: City Journal
+  date: 2026-07-10
+  url: https://www.city-journal.org/article/h-1b-visas-immigration-wages
+
+- id: dol-letter-experience-benchmarking
+  type: writing
+  title: "EIG Letter: DOL Should Use Experience Benchmarking to Prioritize Higher-Skilled H-1B Workers"
+  authors: [Jiaxin He, Sam Peak]
+  venue: Economic Innovation Group
+  date: 2026-05-27
+  url: https://eig.org/dol-letter-experience-benchmarking/
+
+- id: h1b-workers-critical-for-ai
+  type: writing
+  title: H-1B Workers are Critical for AI Dominance
+  authors: [Jiaxin He, Sarah Eckhardt]
+  venue: Agglomerations
+  date: 2026-04-16
+  url: https://agglomerations.eig.org/p/h-1b-workers-are-critical-for-ai
+
+- id: manufacturing-job-gains-fading
+  type: writing
+  title: Most recent manufacturing job gains are fading, but growth persists in dynamic places
+  authors: [Jiaxin He]
+  venue: Agglomerations
+  date: 2026-04-06
+  url: https://agglomerations.eig.org/p/most-recent-manufacturing-job-gains
+
+- id: flawed-paper-h1b-fee
+  type: writing
+  title: The Flawed Paper Behind Trump's $100,000 H-1B Fee
+  authors: [Jiaxin He, Adam Ozimek]
+  venue: Economic Innovation Group
+  date: 2026-02-21
+  url: https://eig.org/the-flawed-paper-behind-trumps-100000-h-1b-fee/
+
+- id: international-students-h1b
+  type: writing
+  title: If international students don't get H-1Bs, IT outsourcers will
+  authors: [Jiaxin He, Sam Peak]
+  venue: Agglomerations
+  date: 2026-01-22
+  url: https://agglomerations.eig.org/p/if-international-students-dont-get
+
+- id: ozs-eligibility-map
+  type: data-project
+  title: OZs 2.0 Eligibility Map
+  authors: [Economic Innovation Group]
+  venue: Economic Innovation Group
+  date: 2026-07-06
+  displayDate: "2026"
+  url: https://eig.org/ozs-resources/
+
+- id: how-many-manufacturing-workers
+  type: writing
+  title: How many manufacturing workers are there?
+  authors: [Adam Ozimek, Ben Glasner, Jiaxin He]
+  venue: Agglomerations
+  date: 2025-12-08
+  url: https://agglomerations.eig.org/p/how-many-manufacturing-workers-are
+
+- id: better-way-allocate-h1b
+  type: writing
+  title: There's a better way to allocate H-1B visas
+  authors: [Connor O'Brien, Sam Peak, Jiaxin He]
+  venue: Agglomerations
+  date: 2025-10-24
+  url: https://agglomerations.eig.org/p/theres-a-better-way-to-allocate-h
+
+- id: dhs-letter-weighted-lottery
+  type: writing
+  title: "EIG Letter: DHS Should Revise Proposed H-1B Weighted Lottery to Prioritize Top Talent"
+  authors: [Sam Peak, Connor O'Brien, Jiaxin He]
+  venue: Economic Innovation Group
+  date: 2025-10-24
+  url: https://eig.org/eig-letter-dhs-should-revise-proposed-h-1b-weighted-lottery-to-prioritize-top-talent/
+
+- id: blunt-tariffs-reshoring
+  type: writing
+  title: Blunt tariffs undermine efforts to reshore high-tech manufacturing
+  authors: [Jiaxin He, Connor O'Brien]
+  venue: Agglomerations
+  date: 2025-09-10
+  url: https://agglomerations.eig.org/p/blunt-tariffs-undermine-efforts-to
+
+- id: state-noncompete-dashboard
+  type: data-project
+  title: State Noncompete Occupation and Demographic Profile Dashboard
+  authors: [Jiaxin He, Economic Innovation Group]
+  venue: Economic Innovation Group
+  date: 2025-06-15
+  displayDate: "2025"
+  url: https://eig.org/state-noncompete-map/#income-profiles
+
+- id: trade-policy-dashboard
+  type: data-project
+  title: Trade Policy Dashboard
+  authors: [Jiaxin He, Economic Innovation Group]
+  venue: Economic Innovation Group
+  date: 2025-05-07
+  url: https://eig.org/trade-policy-dashboard/
+
+- id: rural-retirement
+  type: writing
+  title: Are Rural Americans Left Behind in the Employer-Based Retirement Savings System?
+  authors: [Sarah Eckhardt, Jiaxin He]
+  venue: Economic Innovation Group
+  date: 2025-03-24
+  url: https://eig.org/rural-retirement-savings-system/

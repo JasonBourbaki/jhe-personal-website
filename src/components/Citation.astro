@@ -1,0 +1,71 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Icon } from "astro-icon/components";
+import FormattedDate from "@/components/FormattedDate.astro";
+
+interface Props {
+	writing: CollectionEntry<"writing">;
+}
+
+const { writing } = Astro.props;
+const { authors, date, displayDate, github, title, url, venue } = writing.data;
+
+const separator = (i: number) => {
+	if (i === 0) return "";
+	if (i === authors.length - 1) return authors.length > 2 ? ", and " : " and ";
+	return ", ";
+};
+
+// org-authored items (e.g. dashboards credited to EIG) would repeat the venue
+const showVenue = !(authors.length === 1 && authors[0] === venue);
+---
+
+<article>
+	<a
+		class="cactus-link font-semibold"
+		data-pagefind-meta="title"
+		href={url}
+		rel="noopener noreferrer"
+		target="_blank"
+	>
+		{title}
+	</a>
+	{
+		github && (
+			<a
+				aria-label="GitHub repository"
+				class="hover:text-link ms-1 inline-block align-text-bottom"
+				href={github}
+				rel="noopener noreferrer"
+				target="_blank"
+			>
+				<Icon aria-hidden="true" class="h-5 w-5" focusable="false" name="mdi:github" />
+			</a>
+		)
+	}
+	<p class="text-muted text-sm">
+		{
+			authors.map((author, i) => (
+				<>
+					{separator(i)}
+					{author === "Jiaxin He" ? <span class="font-semibold">{author}</span> : author}
+				</>
+			))
+		}{" "}
+		{
+			showVenue && (
+				<>
+					&middot; <span class="italic">{venue}</span>
+				</>
+			)
+		}{" "}
+		&middot;{" "}
+		{
+			displayDate ? (
+				displayDate
+			) : (
+				<FormattedDate date={date} dateTimeOptions={{ timeZone: "UTC" }} />
+			)
+		}
+	</p>
+</article>
