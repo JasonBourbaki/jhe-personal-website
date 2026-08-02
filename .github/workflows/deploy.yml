@@ -5,9 +5,9 @@ name: Deploy to GitHub Pages
 # To deploy on every push to main instead, uncomment the `push` block below.
 on:
   workflow_dispatch:
-   push:
-     branches: [main]
-
+  push:
+    branches: [main]
+    
 permissions:
   contents: read
   pages: write
