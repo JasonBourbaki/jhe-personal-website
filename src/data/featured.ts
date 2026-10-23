@@ -1,7 +1,9 @@
 import type { ImageMetadata } from "astro";
 import bigExceptionsManufacturing from "@/assets/featured/big-exceptions-manufacturing.jpg";
+import demographyDestiny from "@/assets/featured/demography-destiny.jpg";
 import h1bCityJournal from "@/assets/featured/h1b-city-journal.jpg";
 import manufacturingJobGains from "@/assets/featured/manufacturing-job-gains.jpg";
+import taxForeignStudents from "@/assets/featured/tax-foreign-students.jpg";
 import { getAllWritings, type Writing, type WritingType } from "@/data/writings";
 
 /** Number of cards in the Featured section on the home page. */
@@ -30,6 +32,14 @@ const AUTO_FEATURE_TYPES: ReadonlySet<WritingType> = new Set<WritingType>(["pape
  * adding its image here is what makes the card look right.
  */
 const featuredImages: Record<string, { image: ImageMetadata; alt: string }> = {
+	"demography-is-destiny": {
+		image: demographyDestiny,
+		alt: "Line chart of county population growth by urban/rural typology since 2010",
+	},
+	"tax-on-foreign-students": {
+		image: taxForeignStudents,
+		alt: "Bar chart of international STEM master's graduates using the OPT program",
+	},
 	"big-exceptions-manufacturing-decline": {
 		image: bigExceptionsManufacturing,
 		alt: "Chart of U.S. manufacturing employment change by subsector",

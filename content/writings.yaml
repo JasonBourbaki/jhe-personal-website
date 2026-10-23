@@ -12,6 +12,30 @@
 #   url         link to the piece
 #   github      optional — link to a companion GitHub repository
 
+- id: demography-is-destiny
+  type: writing
+  title: If demography is destiny, can communities change their fate?
+  authors: [Jiaxin He]
+  venue: Agglomerations
+  date: 2026-10-02
+  url: https://agglomerations.eig.org/p/if-demography-is-destiny-can-communities
+
+- id: tax-on-foreign-students
+  type: writing
+  title: A $100,000 tax on foreign students means fewer opportunities for American workers
+  authors: [Sam Peak, Jiaxin He]
+  venue: Agglomerations
+  date: 2026-09-17
+  url: https://agglomerations.eig.org/p/a-100000-tax-on-foreign-students
+
+- id: opt-fee-trojan-horse
+  type: writing
+  title: The $100,000 OPT Fee is a Trojan Horse for H-1B Abuse
+  authors: [Sam Peak, Jiaxin He]
+  venue: Economic Innovation Group
+  date: 2026-08-14
+  url: https://eig.org/100000-opt-fee-h-1b-abuse/
+
 - id: big-exceptions-manufacturing-decline
   type: writing
   title: The big exceptions to the American manufacturing jobs decline

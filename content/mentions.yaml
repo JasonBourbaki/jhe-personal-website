@@ -10,6 +10,68 @@
 #   url         link to the piece
 #   context     optional one-liner on how the piece mentions me
 
+- id: inside-higher-ed-opt-charts
+  outlet: Inside Higher Ed
+  title: What OPT Is and How It Affects the Economy in 6 Charts
+  date: 2026-10-23
+  url: https://www.insidehighered.com/news/global/international-students-us/2026/10/23/breaking-down-opt-and-how-it-affects-economy-6
+  context: >-
+    Draws on our EIG research on OPT salaries and job placements.
+
+- id: bloomberg-factory-jobs
+  outlet: Bloomberg Opinion
+  title: Factory Jobs in America Are Misunderstood and Overvalued
+  date: 2026-10-23
+  url: https://www.bloomberg.com/opinion/articles/2026-10-23/factory-jobs-in-america-are-misunderstood-and-overvalued
+
+- id: ifp-opt-fee-report
+  outlet: Institute for Progress
+  title: DHS's $100k Fee on STEM OPT Would Break High-Skilled Immigration
+  date: 2026-10-12
+  url: https://ifp.org/100k-opt-fee/
+  context: >-
+    Cites our Agglomerations piece on the OPT fee rigging the H-1B lottery
+    toward outsourcers.
+
+- id: raw-story-opt-decimate
+  outlet: Raw Story
+  title: "Experts gasp at new Trump move expected to 'decimate' science and technology workers"
+  date: 2026-10-07
+  url: https://www.rawstory.com/trump-decimate-opt-science-workers/
+  context: >-
+    Quotes our warning that Americans would bear the cost of the proposed OPT
+    fee.
+
+- id: washington-post-ai-economy
+  outlet: The Washington Post
+  title: AI is propping up the economy including in manufacturing, ads and energy
+  date: 2026-10-07
+  url: https://www.washingtonpost.com/technology/2026/10/07/ai-is-propping-up-economy-including-manufacturing-ads-energy/
+
+- id: fed-beyond-factory-gate
+  outlet: Federal Reserve FEDS Notes
+  title: "Beyond the factory gate: The continued importance of goods production"
+  date: 2026-10-02
+  url: https://www.federalreserve.gov/econres/notes/feds-notes/beyond-the-factory-gate-the-continued-importance-of-goods-production-20261002.html
+  context: >-
+    Cites "How many manufacturing workers are there?", which I co-authored, on
+    the gap between household- and business-reported manufacturing employment.
+
+- id: forbes-h1b-tax
+  outlet: Forbes
+  title: DHS Immigration Rule Proposes A $103,265 Tax On New H-1B Visa Holders
+  date: 2026-08-25
+  url: https://www.forbes.com/sites/stuartanderson/2026/08/25/dhs-immigration-rule-proposes-a-103265-tax-on-new-h-1b-visa-holders/
+
+- id: times-of-india-h1b-wages
+  outlet: The Times of India
+  title: "Top 7 US employers pay H-1B workers 50% more than national median: Report"
+  date: 2026-08-06
+  url: https://timesofindia.indiatimes.com/world/us/top-7-us-employers-pay-h-1b-workers-50-more-than-national-median-report/articleshow/133002564.cms
+  context: >-
+    Cites my finding that nearly 89 percent of H-1B positions pay above the
+    median wage for the same occupation and state.
+
 - id: politico-forecast-best-of-substack
   outlet: Politico
   title: "Best of Substack"
